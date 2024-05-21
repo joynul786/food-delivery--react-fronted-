@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+:root {
+  --nav-bg-color:#fef0db;
+  --footer-bg-color:#ffe7e7;
+  --light-bg-color:#fff7ea;
+  --white-color: #fff;
+  --transperant-red-color: #e9575720;
+  --morelighter-red-color: #e95757;
+  --light-red-color: #e54141;
+  --red-color: #e41b1b;
+  --morelight-yellow-color: #ffffdf;
+  --light-yellow-color:#e8d873;
+  --dark-yellow-color:#dfcd02;
+  --yellow-color:#e4cb2e;
+  --transperant-orange-color:#ffae005b;
+  --orange-color:#ffae00;
+  --green-color:#00ff6a;
+  --morelight-gray-color: #e5dfdf;
+  --light-gray-color: #d3c5c5;
+  --medium-gray-color: #888;
+  --dark-gray-color: #444;
+  --moredark-gray-color: #313030;
+}
+
+/* Common CSS */
+a, button, input {
+  all: unset;
+}
+
+li{
+  list-style: none;
+}
+
+a.active {
+  color: var(--yellow-color) !important;
+} 
+
+body::-webkit-scrollbar {
+  width: 5px; 
+  background-color: var(--nav-bg-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--morelighter-red-color); 
+  border-radius: 5px;
+}

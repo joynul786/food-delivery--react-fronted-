@@ -1,0 +1,227 @@
+.container {
+  height: 100%;
+  width: 100%;
+  margin-top: 8rem;
+  margin-bottom: 13rem;
+}
+
+.wrapper {
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* loader */
+.loader {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 6px solid #d1914b;
+  box-sizing: border-box;
+  --c:no-repeat radial-gradient(farthest-side, #d64123 94%,#0000);
+  --b:no-repeat radial-gradient(farthest-side, #000 94%,#0000);
+  background:
+    var(--c) 11px 15px,
+    var(--b) 6px 15px,    
+    var(--c) 35px 23px,
+    var(--b) 29px 15px,    
+    var(--c) 11px 46px,
+    var(--b) 11px 34px,    
+    var(--c) 36px 0px,
+    var(--b) 50px 31px,
+    var(--c) 47px 43px,
+    var(--b) 31px 48px,    
+    #f6d353; 
+  background-size: 15px 15px,6px 6px;
+  animation: loader 800ms infinite;
+}
+@keyframes loader {
+  0%     {-webkit-mask:conic-gradient(#0000 0     ,#000 0)}
+  16.67% {-webkit-mask:conic-gradient(#0000 60deg ,#000 0)}
+  33.33% {-webkit-mask:conic-gradient(#0000 120deg,#000 0)}
+  50%    {-webkit-mask:conic-gradient(#0000 180deg,#000 0)}
+  66.67% {-webkit-mask:conic-gradient(#0000 240deg,#000 0)}
+  83.33% {-webkit-mask:conic-gradient(#0000 300deg,#000 0)}
+  100%   {-webkit-mask:conic-gradient(#0000 360deg,#000 0)}
+}
+/* loader end */
+
+.title {
+  text-transform: capitalize;
+  color: var(--morelighter-red-color);
+  font-size: 2rem;
+  margin-bottom: 3rem;
+}
+
+.noQuantity {
+  color: var(--morelighter-red-color);
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+.foodInner {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.ImgContainer {
+  width: 11rem;
+  height: 10rem;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-right: 25px;
+}
+
+.ImgContainer > img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: all 250ms ease-in-out;
+}
+
+.ImgContainer > img:hover {
+  scale: 1.1;
+}
+
+.foodDetails {
+  width: 25rem;
+  height: 10rem;
+  margin: 0px;
+}
+
+.foodTitle {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--morelighter-red-color);
+  margin-bottom: 3px;
+}
+
+.foodDescription,
+.foodCategory,
+.foodQuantity {
+  font-size: 11.5px;
+  margin-bottom: 5px;
+}
+
+.foodDetails span {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--moredark-gray-color);
+}
+
+.foodQuantity{
+  display: flex;
+  align-items: center;
+}
+
+.quentityBtn{
+  height: 10px;
+  width: 10px;
+  margin: 0 1px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1px;
+}
+
+.foodQuantity .quantityNum{
+  font-size: 10px;
+  margin: 0 3px;
+  font-weight: 400;
+  color: var(--morelighter-red-color);
+}
+
+.foodPrice {
+  margin-bottom: 8px;
+  font-size: 0.6563rem;
+  font-weight: 900;
+  color: var(--dark-gray-color);
+}
+
+.cartBtn {
+  color: var(--morelighter-red-color);
+  font-size: 0.625rem;
+  font-weight: 600;
+  padding: 3px 4px;
+  width: 4rem;
+  background-color: var(--light-yellow-color);
+  border-radius: 8px;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartBtn .cartIcon{
+  color: var(--moredark-gray-color);
+  height: 14px;
+  width: 14px;
+  padding-left: 3px;
+}
+
+.cartBtn:hover {
+  border-color: var(--yellow-color);
+  color: var(--morelighter-red-color);
+  background-color: var(--white-color);
+}
+
+
+
+/* Responsiveness */
+/* phone screen */
+@media all and (max-width: 376px) {
+  .wrapper {
+    width: 96%;
+  }
+
+  .title,
+  .noQuantity {
+    font-size: 1.5rem;
+  }
+
+  .ImgContainer {
+    width: 5.8rem;
+    height: 8.8rem;
+    margin-bottom: 1.5px;
+    margin-right: 8px;
+  }
+
+  .foodDetails {
+    width: 10rem;
+    height: 6rem;
+    margin: 0 1px;
+  }
+
+  .foodDescription,
+  .foodCategory,
+  .foodQuantity {
+    font-size: 8.5px;
+    font-weight: 500;
+    margin-bottom: 2.1px;
+  }
+
+  .foodDetails span {
+    font-size: 10px;
+  }
+
+  .foodTitle {
+    font-size: 0.7rem;
+    margin-bottom: 2px;
+  }
+
+  .foodPrice {
+    font-size: 0.625rem;
+  }
+
+  .cartBtn {
+    font-size: 0.5rem;
+    padding: 2px 0px;
+  }
+}
